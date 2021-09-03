@@ -1,26 +1,17 @@
-# HP EliteBook 850 G5 Hackintosh
+# HP EliteBook 1040 G4 Hackintosh
 
-A HP EliteBook 850 G5 Hackintosh running Mojave 10.14.6.
+A HP EliteBook 1040 G4 Hackintosh running Catalina 10.15.7.
 
 ![](screenshots/specs.png)
-
-## Description
-
-I have already two Hackintoshes :
-
-* A desktop [Hackintosh](https://github.com/kinoute/Hack-Z370-HD3P-i5-8400) at home with a i5-8400 and a Gigabyte Z370-HD3P ;
-* A Dell Latitude E6430 [Hackintosh](https://github.com/kinoute/Hack-Dell-Latitude-E6430) I was given at work.
-
-I had the chance to put my hands on a nice HP EliteBook 850 G5 Laptop and couldn't resist, again, to install macOS on it.
 
 ## Laptop Specs
 
 * macOS Mojave 10.14.6
-* Intel i5-8350U vPro @ 1.7 Ghz, TurboBoost @ 3.6 Ghz (4 cores, 8 threads)
-* Samsung M471A2K43CB1-CTD 32GB DDR4-RAM SDRAM SO-DIMM @ 2400 Mhz
+* Intel i5-7300U
+* 16GB DDR4 @ 2133 Mhz
 * Intel UHD Graphics 620 1536 Mb
-* Toshiba XG5 KXG50ZNV1T02 1TB NVMe SSD PCIe 3.1a 
-* 15.6" FHD IPS anti-glare LED-backlit @ 120 Hz (used as retina display, see below)
+* 256GB SSD
+* 14" FHD IPS touchscreen @ 60 Hz (used as retina display, see below)
 
 ## What works
 
@@ -38,26 +29,17 @@ I had the chance to put my hands on a nice HP EliteBook 850 G5 Laptop and couldn
 * HDMI Out
 * HP Sure View (makes your screen difficult for onlookers to view from the sides)
 * FileVault 2 (you can use it, kexts for that are already in my EFI folder)
+* WebCam
 
 ## Doesn't work / Not tested
 
-* **Webcam :** Depends of the Webcam vendor & model. Can work or not.
-* **Smart Card Reader :** Not tested, I disabled it in the BIOS.
-* **Joystick Mouse**: You don't need it anyway with a trackpad fully working.
+* **TouchScreen :** Turned off in BIOS
 
 ## Installation
 
 ### BIOS Settings
 
-BIOS with this particular laptop was difficult to setup. You have to disable a lot of things, especially "Secure Boot". In order to do that, you will have to enter a PIN Code after the change to validate that, indeed, you really want to disable it.
-
-**BIOS Version:** Q78 Ver. 01.10.01 March 6th, 2020
-
-My BIOS Settings are available as pictures here : [BIOS](BIOS/README.md).
-
-If you are using a version older than 01.10.01, be careful if you want to update your BIOS to 01.10.01 or newer. They changed something and you have to add an ACPI Patch in your `config.plist` before the update, otherwise macOS won't boot.
-
-This is already done in my `config.plist` available in this repo as of April 30th, 2020.
+You have to disable a lot of things, especially "Secure Boot".
 
 ### Creating the USB Installer
 
